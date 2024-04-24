@@ -1,0 +1,50 @@
+export default{
+    name:'blog',
+    type:'document',
+    title:'Blog',
+    fields:[
+        {
+            name:'title',
+            type:'string',
+            title:'Title of Blog Article'
+        },
+        {
+            name:'slug',
+            type:'slug',
+            title:'Slug of your Blog Article', 
+            options:{
+                source:'title'
+            }
+        },
+        {
+           name:'titleImage',
+           type:'image',
+           title:'Title Image' 
+        },
+        {
+            name:'smallDescription',
+            type:'text',
+            title:'SmallDescription'
+        },
+        {
+            name:'metatitle',
+            type:'string',
+            title:'MetaTitle'
+        },
+        {
+            name:'metaDescription',
+            type:'text',
+            title:'MetaDescription'
+        },
+        {
+            name:'content',
+            type:'array',
+            title:'Content',
+            of:[
+                {
+                    type:'block'
+                }
+            ]
+        }
+    ]
+}
